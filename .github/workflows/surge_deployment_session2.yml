@@ -1,14 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: React app deploy to surge
+name: React app deploy to surge for session2
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ Session2 ]
   pull_request:
-    branches: [ master ]
+    branches: [ Session2 ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,4 +41,4 @@ jobs:
         run: npm install --global surge
         
       - name: Deploy Surge
-        run: surge ./build reactbasedapp-suleman.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build reactbasedapp-suleman2.surge.sh --token ${{ secrets.SURGE_TOKEN }}
